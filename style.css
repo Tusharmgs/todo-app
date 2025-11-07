@@ -1,0 +1,230 @@
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #1a1a1a;
+        font-family: "Poppins", sans-serif, Arial, sans-serif;
+        color: #1b1b1b;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      h1 {
+        font-weight: 700;
+        margin-bottom: 40px;
+        font-size: 2rem;
+        color: #d5b40f;
+        text-align: center;
+      }
+
+      /* Container for form and todos */
+      .todo {
+        width: 100%;
+        max-width: 980px;
+        margin-bottom: 40px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      /* Input */
+      .todo input[type="text"] {
+        flex-grow: 1;
+        padding: 10px 15px;
+        border: 2px solid #d5b40f;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: 300;
+        outline-offset: 2px;
+        transition: border-color 0.3s ease;
+      }
+      .todo input[type="text"]:focus {
+        border-color: #d5b40f;
+        outline: none;
+      }
+
+      /* Add button */
+      .todo button {
+        background-color: #d5b40f;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 25px;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+
+        transition: background-color 0.3s ease;
+      }
+      .todo button:hover {
+        background-color: #a88e0c;
+      }
+
+      /* Container for todo sticky notes */
+      .todoContainer {
+        max-width: 980px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+      }
+
+      /* Individual todo sticky note */
+      .data {
+        position: relative;
+        width: 280px;
+        padding: 25px 20px 20px 20px;
+        /*  border-radius: 5px; */
+        box-shadow: 6px 6px 0 #2b2360;
+        color: #1b1b1b;
+        font-weight: 300;
+        cursor: default;
+        word-break: break-word;
+      }
+
+      /* Delete button */
+      .data .deleteButton {
+        position: absolute;
+        right: 8px;
+        bottom: 8px;
+        background-color: #2b2360cc;
+        color: white;
+        border: none;
+        /* border-radius: 4px; */
+        padding: 6px 12px;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: background-color 0.3s ease;
+      }
+      .data button:hover {
+        background-color: #1a1742cc;
+      }
+      .data .editButton {
+        position: absolute;
+        right: 80px;
+        bottom: 8px;
+        background-color: #2b2360cc;
+        color: white;
+        border: none;
+        /* border-radius: 4px; */
+        padding: 6px 12px;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: background 0.3s ease;
+      }
+      .data button:hover {
+        background-color: #1a1742cc;
+      }
+
+      /* Different pastel backgrounds */
+      /* These should correspond to your colors[] from JS */
+      /* Added border shadows to mimic sticky */
+      .yellow {
+        background-color: #fff07a;
+        box-shadow: 6px 6px 0 #2b2360;
+      }
+      .purple {
+        background-color: #9f99f9;
+        box-shadow: 6px 6px 0 #2b2360;
+        color: #fff;
+        font-weight: 600;
+      }
+      .pink {
+        background-color: #f9a3af;
+        box-shadow: 6px 6px 0 #2b2360;
+        color: #fff;
+        font-weight: 600;
+      }
+      .gray1 {
+        background-color: #07657d;
+        box-shadow: 6px 6px 0 #064c5e;
+        color: #fff;
+        font-weight: 600;
+      }
+      .gray2 {
+        background-color: #6c7d07;
+        box-shadow: 6px 6px 0 #546205;
+        color: #fff;
+        font-weight: 600;
+      }
+      .amber {
+        background-color: #df9e02;
+        box-shadow: 6px 6px 0 #9c6e00;
+        color: #fff;
+        font-weight: 600;
+      }
+      .teal {
+        background-color: #00c9a7;
+        box-shadow: 6px 6px 0 #05745d;
+        color: #fff;
+        font-weight: 600;
+      }
+      .blue {
+        background-color: #5c9cff;
+        box-shadow: 6px 6px 0 #284b8d;
+        color: #fff;
+        font-weight: 600;
+      }
+      .pinkred {
+        background-color: #ff4e75;
+        box-shadow: 6px 6px 0 #891e37;
+        color: #fff;
+        font-weight: 600;
+      }
+      .softpurple {
+        background-color: #9d7aff;
+        box-shadow: 6px 6px 0 #5937ab;
+        color: #fff;
+        font-weight: 600;
+      }
+      .cyan {
+        background-color: #00b9ce;
+        box-shadow: 6px 6px 0 #056f88;
+        color: #fff;
+        font-weight: 600;
+      }
+      .orange {
+        background-color: #ffa964;
+        box-shadow: 6px 6px 0 #ab6b2e;
+        color: #fff;
+        font-weight: 600;
+      }
+      .lime {
+        background-color: #a9ff78;
+        box-shadow: 6px 6px 0 #628933;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      /* Responsive */
+      @media (max-width: 980px) {
+        .todoContainer {
+          justify-content: center;
+        }
+        .data {
+          width: 45vw;
+        }
+      }
+      @media (max-width: 600px) {
+        .todo {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 15px;
+        }
+        .todo input[type="text"] {
+          width: 100%;
+        }
+        .data {
+          width: 85vw;
+        }
+      }
